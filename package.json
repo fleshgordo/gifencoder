@@ -1,0 +1,21 @@
+{
+  "name": "gifencoder",
+  "version": "1.0.0",
+  "description": "create automated gifs",
+  "main": "encode.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.4.3",
+    "png-file-stream": "^1.2.1"
+  },
+  "devDependencies": {
+    "jpg-stream": "^1.1.2"
+  }
+}
