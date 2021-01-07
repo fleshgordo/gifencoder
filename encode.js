@@ -20,7 +20,7 @@ watcher
     else if (path == "images/0000499.jpg") {
       console.log("### create GIF now ... 3 .. 2 .. 1 ...")
       let newfilename = Date.now() + ".gif";
-      exec("ffmpeg -y -f image2 -i ./images/%07d.jpg output/" + newfilename, (error, stdout, stderr) => {
+      exec("ffmpeg -y -i ./images/%07d.jpg -vf fps=15,scale=720:-1 output/" + newfilename, (error, stdout, stderr) => {
         if (error) {
           console.log(`error: ${error.message}`);
           return;
