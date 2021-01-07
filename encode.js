@@ -1,4 +1,3 @@
-
 let chokidar = require('chokidar');
 const {
   exec
@@ -24,8 +23,12 @@ watcher
         }
         if (stderr) {
           console.log(`stderr: ${stderr}`);
+          console.log('---- remove old files....')
+          exec("rm images/*.jpg");
+
           return;
         }
+        console.log('---- done....')
         console.log(`stdout: ${stdout}`);
       });
 
